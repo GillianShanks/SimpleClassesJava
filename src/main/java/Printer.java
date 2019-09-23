@@ -13,4 +13,10 @@ public class Printer {
     public void setSheets(int sheets) {
         this.sheets = sheets;
     }
+
+    public void print(int numOfPages, int numOfCopies) {
+        int pagesToPrint = numOfPages * numOfCopies;
+        this.sheets -= pagesToPrint;
+
+    }
 }

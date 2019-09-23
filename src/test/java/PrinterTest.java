@@ -16,4 +16,11 @@ public class PrinterTest {
     public void hasNumberOfSheets(){
         assertEquals(10, printer.getSheets());
     }
+
+    @Test
+    public void printRemovesPaperIfEnoughPaper(){
+        printer.print(2, 3);
+        assertEquals(4, printer.getSheets());
+
+    }
 }
