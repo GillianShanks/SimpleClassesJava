@@ -28,4 +28,9 @@ public class PrinterTest {
         printer.print(2, 6);
         assertEquals(10, printer.getSheets());
     }
+
+    @Test
+    public void hasToner(){
+        assertEquals(7, printer.getTonerVolume());
+    }
 }

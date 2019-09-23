@@ -1,17 +1,19 @@
 public class Printer {
 
     private int sheets;
+    private int tonerVolume;
 
     public Printer(){
         this.sheets = 10;
+        this.tonerVolume = 7;
     }
 
     public int getSheets() {
         return sheets;
     }
 
-    public void setSheets(int sheets) {
-        this.sheets = sheets;
+    public int getTonerVolume() {
+        return tonerVolume;
     }
 
     public void print(int numOfPages, int numOfCopies) {
