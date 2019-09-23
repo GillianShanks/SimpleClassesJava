@@ -20,7 +20,10 @@ public class Printer {
         int pagesToPrint = numOfPages * numOfCopies;
 
         if (getSheets() > pagesToPrint) {
-            this.sheets -= pagesToPrint;
+            if (getTonerVolume() > pagesToPrint) {
+                this.sheets -= pagesToPrint;
+                this.tonerVolume -= pagesToPrint;
+            }
         }
 
     }
