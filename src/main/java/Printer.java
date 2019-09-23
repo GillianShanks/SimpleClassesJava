@@ -16,7 +16,10 @@ public class Printer {
 
     public void print(int numOfPages, int numOfCopies) {
         int pagesToPrint = numOfPages * numOfCopies;
-        this.sheets -= pagesToPrint;
+
+        if (getSheets() > pagesToPrint) {
+            this.sheets -= pagesToPrint;
+        }
 
     }
 }
